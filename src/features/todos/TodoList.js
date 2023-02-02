@@ -11,6 +11,7 @@ import { useState } from "react";
 const TodoList = () => {
   const [newTodo, setNewTodo] = useState("");
 
+  //it s automatically created by rtk query
   const {
     data: todos,
     isLoading,
@@ -18,6 +19,7 @@ const TodoList = () => {
     isError,
     error,
   } = useGetTodosQuery();
+
   const [addTodo] = useAddTodoMutation();
   const [updateTodo] = useUpdateTodoMutation();
   const [deleteTodo] = useDeleteTodoMutation();

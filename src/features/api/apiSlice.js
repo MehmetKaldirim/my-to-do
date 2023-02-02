@@ -18,6 +18,8 @@ export const apiSlice = createApi({
       }),
       invalidatesTags: ["Todos"],
     }),
+
+    //patch for changing one part and put for changing all data...
     updateTodo: builder.mutation({
       query: (todo) => ({
         url: `/todos/${todo.id}`,
@@ -37,6 +39,7 @@ export const apiSlice = createApi({
   }),
 });
 
+//we are creating here custom hook use + methodName + Query
 export const {
   useGetTodosQuery,
   useAddTodoMutation,
